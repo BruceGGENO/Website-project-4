@@ -10,6 +10,11 @@ module.exports = {
     extend: {
       fontFamily: {
         'custom': 'Century Gothic'
+      },
+      fontWeight: {
+        '450': '450',
+        '550': '550',
+        '650': '650',
       }
     },
   },
