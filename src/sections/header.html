@@ -1,20 +1,15 @@
-<div class="flex justify-between align-center mt-7 px-3">
-    <div class="mt-2 text-[18px] font-medium">
+<header class="flex justify-between align-center py-2 px-7 sticky t-0">
+    <div class="mt-2 text-[1rem] lg:text-[1.5rem] font-medium md:text-[25px]">
         <p>DE</p>
         <p>EN</p>
     </div>
-    <img src="img/baumeister.png" class="lg:h-[5rem] lg:w-[15rem]">
-    <img src="img/menu.png" class="block h-5 w-10 mt-4 lg:hidden cursor-pointer" id="menu">
-    <div class="flex text-right hidden mt-2 lg:block text-[18px] font-medium font-sans">
+    <h1 class="hidden lg:block mt-5 font-bold text-4xl">Baumeister</h1>
+    <img src="img/baumeister.png" class="lg:hidden h-10 mt-3 lg:h-[5rem] lg:w-[20rem] md:h-20">
+    <img src="img/menu.png" class="block h-5 md:h-10 w-10 md:w-16 mt-6 lg:hidden cursor-pointer" id="menu">
+    <div class="flex text-right hidden mt-2 lg:block text-[1.2rem] font-semibold font-custom gap-1">
         <p>About</p>
         <p>Services</p>
         <p>References</p>
         <p>Contact</p>
     </div>
-</div>
-<script>
-    const menuBtn = document.querySelector('#menu')
-    menuBtn.addEventListener('click', function () {
-        menuBtn.style.height = '70px';
-    })
-</script>
+</header>
