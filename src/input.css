@@ -1,0 +1,23 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+@theme {
+  --font-fit: "Outfit", sans-serif;
+  --color-primary: #00672e; /* default color*/
+  --color-background: #efecea; /*background color*/
+  /* --breakpoint */
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: 0;
+  }
+
+  .scrollable {
+    overflow: auto;
+  }
+}
