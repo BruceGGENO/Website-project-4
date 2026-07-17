@@ -23,10 +23,12 @@
         loadComponents('contact', 'src/sections/contact.html');
         loadComponents('footer', 'src/sections/footer.html');
     }
-    const menuBtn = document.querySelector('#menu')
-    menuBtn.addEventListener('click', function () {
-        document.body.style.backgroundColor = 'red';
-    })
+    setTimeout(function () {
+        const menuBtn = document.querySelector('#menu');
+        menuBtn.addEventListener('click', function () {
+            menuBtn.src = 'img/close.png'
+        })
+    }, 500)
 </script>
 
 <body class="bg-[#EFECEA]">
