@@ -17,18 +17,32 @@
             });
     }
 
+    const setupMenuToggle = () => {
+        const menuBtn = document.querySelector('#menu');
+        if (!menuBtn) {
+            // Try again after 100ms
+            setTimeout(setupMenuToggle, 100);
+            return;
+        }
+
+        menuBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            if (this.src.includes('menu.png') || this.src.includes('menu')) {
+                this.src = 'img/close.png';
+            } else {
+                this.src = 'img/menu.png';
+            }
+        });
+    }
+
     window.onload = () => {
         loadComponents('header', 'src/sections/header.html');
         loadComponents('hero', 'src/sections/hero.html');
         loadComponents('contact', 'src/sections/contact.html');
         loadComponents('footer', 'src/sections/footer.html');
+
+        setTimeout(setupMenuToggle, 100);
     }
-    setTimeout(function () {
-        const menuBtn = document.querySelector('#menu');
-        menuBtn.addEventListener('click', function () {
-            menuBtn.src = 'img/close.png'
-        })
-    }, 500)
 </script>
 
 <body class="bg-[#EFECEA] font-custom">
