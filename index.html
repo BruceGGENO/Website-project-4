@@ -17,10 +17,9 @@
             });
     }
 
-    const setupMenuToggle = () => {
+    function setupMenuToggle() {
         const menuBtn = document.querySelector('#menu');
         if (!menuBtn) {
-            // Try again after 100ms
             setTimeout(setupMenuToggle, 100);
             return;
         }
