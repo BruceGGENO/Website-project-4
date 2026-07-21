@@ -9,7 +9,8 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        'custom': 'Century Gothic'
+        'custom': 'Century Gothic',
+        'outfit': 'Outfit'
       }
     },
   },
