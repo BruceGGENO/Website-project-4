@@ -1,21 +1,20 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="dist/output.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="dist/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Website project template</title>
-</head>
-<script>
+  </head>
+  <script>
     const loadComponents = (id, url) => {
-        fetch(url)
-            .then((response) => response.text())
-            .then((html) => {
-                document.getElementById(id).innerHTML = html;
-            });
-    }
+      fetch(url)
+        .then((response) => response.text())
+        .then((html) => {
+          document.getElementById(id).innerHTML = html;
+        });
+    };
 
     const setupMenuToggle = () => {
         const menuBtn = document.querySelector('#menu');
@@ -36,6 +35,14 @@
     }
 
     window.onload = () => {
+      loadComponents("header", "src/sections/header.html");
+      loadComponents("hero", "src/sections/hero.html");
+      loadComponents("contact", "src/sections/contact.html");
+      loadComponents("footer", "src/sections/footer.html");
+    };
+  </script>
+
+  <body>
         loadComponents('header', 'src/sections/header.html');
         loadComponents('hero', 'src/sections/hero.html');
         loadComponents('contact', 'src/sections/contact.html');
@@ -54,6 +61,8 @@
     <div id="contact"></div>
     <div id="dataprivacy"></div>
     <div id="footer"></div>
+  </body>
+</html>
    
 </body>
 
