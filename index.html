@@ -20,6 +20,10 @@
     function setupMenuToggle() {
         const menuBtn = document.querySelector('#menu');
         if (!menuBtn) {
+    const setupMenuToggle = () => {
+        const menuBtn = document.querySelector('#menu');
+        if (!menuBtn) {
+            // Try again after 100ms
             setTimeout(setupMenuToggle, 100);
             return;
         }
@@ -39,6 +43,8 @@
         loadComponents('hero', 'src/sections/hero.html');
         loadComponents('contact', 'src/sections/contact.html');
         loadComponents('footer', 'src/sections/footer.html');
+        loadComponents('menu', 'src/sections/menu.html');
+        loadComponents('dataprivacy', 'src/sections/dataprivacy.html');
 
         setTimeout(setupMenuToggle, 100);
     }
@@ -47,8 +53,11 @@
 <body class="bg-[#EFECEA] font-custom">
     <div id="header"></div>
     <div id="hero"></div>
+    <div id="menu"></div>
     <div id="contact"></div>
+    <div id="dataprivacy"></div>
     <div id="footer"></div>
+   
 </body>
 
-</html>>
+</html>
