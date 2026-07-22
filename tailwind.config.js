@@ -7,7 +7,12 @@ module.exports = {
     "./sections/**/*.html"
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        'custom': 'Century Gothic',
+        'outfit': 'Outfit'
+      }
+    },
   },
   plugins: [],
 }
