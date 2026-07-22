@@ -8,6 +8,14 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Website project template</title>
 </head>
+
+
+<body class="bg-[#EFECEA]">
+    <div id="header"></div>
+    <div id="hero"></div>
+    <div id="contact"></div>
+    <div id="footer"></div>
+</body>
 <script>
     const loadComponents = (id, url) => {
         fetch(url)
@@ -28,9 +36,9 @@
         menuBtn.addEventListener('click', function (e) {
             e.preventDefault();
             if (this.src.includes('menu.png') || this.src.includes('menu')) {
-                this.src = 'img/close.png';
+                this.src = 'vectors/close.png';
             } else {
-                this.src = 'img/menu.png';
+                this.src = 'vectors/menu.png';
             }
         });
     }
@@ -44,12 +52,5 @@
         setTimeout(setupMenuToggle, 100);
     }
 </script>
-
-<body class="bg-[#EFECEA]">
-    <div id="header"></div>
-    <div id="hero"></div>
-    <div id="contact"></div>
-    <div id="footer"></div>
-</body>
 
 </html>>
