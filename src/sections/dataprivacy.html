@@ -10,7 +10,8 @@
 </head>
 
 <body>
-    <div class="min-h-screen w-full font-custom">
+    <div id="header" class="text-green-800 font-custom"></div>
+    <div class="min-h-screen w-full mt-44">
         <div class="flex flex-col gap-1 px-6 md:gap-3 pb-12 md:px-6 lg:px-32 text-green-800">
             <p class="text-green-900 text-bold  text-xl pt-5 font-semibold tracking-tighter">DATA PRIVACY</p>
             <p class="py-1 text-green-800 font-normal  text-xl Word-spacing tracking-wider">PRIVATE POLICY</p>
@@ -622,6 +623,41 @@
             </div>
 
         </div>
+
+        <div id="footer" class="text-green-800"></div>
 </body>
+<script>
+    const loadComponents = (id, url) => {
+        fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById(id).innerHTML = html;
+            });
+    };
+
+
+
+    window.onload = () => {
+        loadComponents("header", "header.html");
+        loadComponents("footer", "footer.html");
+    };
+
+    function setupMenuToggle() {
+        const menuBtn = document.querySelector("#menu img");
+
+        if (!menuBtn) {
+            setTimeout(setupMenuToggle, 50);
+            return;
+        }
+
+        menuBtn.addEventListener("click", function () {
+            if (this.src.includes("menu.png")) {
+                this.src = "vectors/close.png";
+            } else {
+                this.src = "vectors/menu.png";
+            }
+        });
+    }
+</script>
 
 </html>
