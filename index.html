@@ -17,24 +17,20 @@
     };
 
     function setupMenuToggle() {
-        const menuBtn = document.querySelector('#menu');
-        if (!menuBtn) {
-    const setupMenuToggle = () => {
-        const menuBtn = document.querySelector('#menu');
-        if (!menuBtn) {
-            // Try again after 100ms
-            setTimeout(setupMenuToggle, 100);
-            return;
-        }
+            const menuBtn = document.querySelector("#menu img");
 
-        menuBtn.addEventListener('click', function (e) {
-            e.preventDefault();
-            if (this.src.includes('menu.png') || this.src.includes('menu')) {
-                this.src = 'img/close.png';
-            } else {
-                this.src = 'img/menu.png';
+            if (!menuBtn) {
+                setTimeout(setupMenuToggle, 100);
+                return;
             }
-        });
+
+            menuBtn.addEventListener("click", function () {
+                if (this.src.includes("menu.png")) {
+                    this.src = "img/close.png";
+                } else {
+                    this.src = "img/menu.png";
+                }
+            });
     }
 
     window.onload = () => {
