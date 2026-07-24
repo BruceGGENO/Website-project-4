@@ -40,15 +40,15 @@
         const menuBtn = document.querySelector("#menu img");
 
         if (!menuBtn) {
-            setTimeout(setupMenuToggle, 50);
+            setTimeout(setupMenuToggle, 10);
             return;
         }
 
         menuBtn.addEventListener("click", function () {
             if (this.src.includes("menu.png")) {
-                this.src = "vectors/close.png";
+                this.src = "./vectors/close.png";
             } else {
-                this.src = "vectors/menu.png";
+                this.src = "./vectors/menu.png";
             }
         });
     }
