@@ -1,59 +1,57 @@
 <!doctype html>
-<html lang="en">
-  <head>
+<html lang="en" class="scroll-smooth">
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="dist/output.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Website project template</title>
-  </head>
-  <script>
-    const loadComponents = (id, url) => {
-      fetch(url)
-        .then((response) => response.text())
-        .then((html) => {
-          document.getElementById(id).innerHTML = html;
-        });
-    };
-
-    function setupMenuToggle() {
-            const menuBtn = document.querySelector("#menu img");
-
-            if (!menuBtn) {
-                setTimeout(setupMenuToggle, 100);
-                return;
-            }
-
-            menuBtn.addEventListener("click", function () {
-                if (this.src.includes("menu.png")) {
-                    this.src = "img/close.png";
-                } else {
-                    this.src = "img/menu.png";
-                }
-            });
-    }
-
-    window.onload = () => {
-      loadComponents("header", "src/sections/header.html");
-      loadComponents("hero", "src/sections/hero.html");
-      loadComponents("contact", "src/sections/contact.html");
-      loadComponents("footer", "src/sections/footer.html");
-      loadComponents('menu', 'src/sections/menu.html');
-      loadComponents('dataprivacy', 'src/sections/dataprivacy.html');
-    };
-  </script>
+</head>
 
 
 <body class="bg-[#EFECEA] font-custom">
     <div id="header"></div>
     <div id="hero"></div>
     <div id="menu"></div>
-    <div id="contact"></div>
-    <div id="dataprivacy"></div>
     <div id="footer"></div>
-  </body>
-</html>
-   
 </body>
+<script>
+    const loadComponents = (id, url) => {
+        fetch(url)
+            .then((response) => response.text())
+            .then((html) => {
+                document.getElementById(id).innerHTML = html;
+            });
+    };
+
+
+
+    window.onload = () => {
+        loadComponents("header", "src/sections/header.html");
+        loadComponents("hero", "src/sections/hero.html");
+        loadComponents("contact", "src/sections/contact.html");
+        loadComponents("footer", "src/sections/footer.html");
+        loadComponents('menu', 'src/sections/menu.html');
+        loadComponents('dataprivacy', 'src/sections/dataprivacy.html');
+    };
+
+    function setupMenuToggle() {
+        const menuBtn = document.querySelector("#menu img");
+
+        if (!menuBtn) {
+            setTimeout(setupMenuToggle, 10);
+            return;
+        }
+
+        menuBtn.addEventListener("click", function () {
+            if (this.src.includes("menu.png")) {
+                this.src = "./vectors/close.png";
+            } else {
+                this.src = "./vectors/menu.png";
+            }
+        });
+    }
+</script>
 
 </html>
